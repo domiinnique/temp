@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+body {
+
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.8rem;
+}
+h1 {
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: floralwhite;
+  padding: 30px;
+  margin: 20px;
+    align-content: center;
+  justify-content: space-between;
+}
+
+}
+#wrapper > * {
+  margin: 1rem;
+}
+#wrapper > header {
+  margin: 0;
+}
+
+
+nav a {
+  display: block;
+  padding: 10px;
+    float: left;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+}
+nav a:hover {
+  background: floralwhite;
+  color: var(--color-blue-base);
+  border-bottom: 1px solid var(--color-blue-dark);
+}
+
+main section h2 {
+  border-bottom: 1px solid var(--color-grey-base);
+  color: var(--color-grey-darkest);
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+
+
+.course {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  border:  1px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.course img {
+  box-shadow: 1px 1px 1px 1px var(--color-grey-dark);
+}
+.course .soldout {
+  display: none;
+}
+.course.soldout .soldout {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: var(--color-grey-lightest);
+  display: block;
+  background-color: var(--color-pink-light);
+  transform: rotate(-45deg);
+}
+.course h3 {
+  font-family: var(--font-family-serif);
+}
+.course header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.course .price {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  background: var(--color-white);
+  margin: 0;
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 1px 1px 1px var(--color-grey-dark);
+}
+.course .price-discount {
+  right: initial;
+  text-decoration: line-through;
+  left: -4px;
+}
+.course .price-discount + .price-full:before {
+  content: "only ";
+}
+.course .info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.course button {
+  display: block;
+  margin-top: auto;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  color: var(--color-grey-lightest);
+  font-size: var(--font-size-base);
+  background: var(--color-blue-base);
+  transition: all 0.4s;
+  box-shadow: 2px 2px 0px 0px transparent;
+  position: relative;
+}
+.course button:before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transform-origin: top left;
+}
+.course button:hover {
+  cursor: pointer;
+  color: var(--color-white);
+  background: var(--color-blue-light);
+  box-shadow: 2px 2px 0px 0px var(--color-blue-base);
+}
+.course button:hover:before {
+  transform: scaleX(1);
+}
+.course button:active {
+  background: var(--color-pink-light);
+  box-shadow: 2px 2px 0px 0px var(--color-pink-dark);
+  transition: all 0.1s;
+}
+
+@media all and (min-width: 600px) {
+  main > section > h2 {
+    grid-column: 1/-1;
+  }
+  main > section {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    grid-auto-rows: 1fr;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer > section:last-child {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 800px) {
+  nav {
+    display: flex;
+    background: var(--color-blue-light);
+  }
+  nav a {
+    border-bottom-color: transparent;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #wrapper {
+    grid-template-columns: 300px 1fr;
+  }
+  header {
+    grid-column: 1/-1;
+    }}
+
+
+h1
+{
+    color:#521f00;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;
+ font-family: 'Nanum Myeongjo', serif;
+
+}
+
+
+h2
+{
+    color:#521f00;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 2px;
+
+}
+
+h2:hover {
+  color: bisque;
+}
+
+h3
+{
+    color:#521f00;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+ font-family: 'Nanum Myeongjo', serif;
+
+}
+
+h4
+{
+    color:#521f00;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+ font-family: 'Nanum Myeongjo', serif;
+
+}
+
+h5
+{
+    color:#884343;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 0px;
+ font-family: 'Nanum Myeongjo', serif;
+
+}
+
+
+p
+{
+    font-family: 'Nanum Myeongjo', serif;
+    color: lightslategrey;
+   font-size: 10px;
+}
