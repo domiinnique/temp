@@ -189,14 +189,6 @@ main section h2 {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  #wrapper {
-    grid-template-columns: 300px 1fr;
-  }
-  header {
-    grid-column: 1/-1;
-    }}
-
 
 h1
 {
