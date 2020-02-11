@@ -1,10 +1,7 @@
-
-
-
-
-
-
-
+const modal = document.querySelector(".modal-background");
+modal.addEventListener("click", () => {
+  modal.classList.add("hide");
+});
 
 fetch("https://kea-alt-del.dk/t5/api/categories")
   .then(res => res.json())
@@ -69,6 +66,12 @@ function showSingleDish(dish) {
     copy.querySelector(".price-full span").textContent = dish.price
   }
 
+copy.querySelector("button").addEventListener("click", () => {
+    console.log("click", dish)
+    fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
+      .then(res => res.json())
+      .then(showDetails);
+  });
 
 
     console.log(`#${dish.category}`)
@@ -77,4 +80,26 @@ function showSingleDish(dish) {
 //    whoIsYourDaddy.appendChild(copy)
 
 }
+
+function showDetails(data) {
+  modal.querySelector(".modal-name").textContent = data.name;
+ modal.querySelector(".modal-description-short").textContent = data.shortdescription;
+  modal.querySelector(".modal-description").textContent = data.longdescription;
+  //...
+  modal.classList.remove("hide");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
