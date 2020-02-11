@@ -49,7 +49,16 @@ function showSingleDish(dish) {
   const copy = template.cloneNode(true);
 
   copy.querySelector("h3").textContent = dish.name;
-   copy.querySelector("h4").textContent = dish.shortdescription;
+  copy.querySelector("h4").textContent = dish.shortdescription;
+
+
+   const imageName = dish.image; // this would be dynamic
+   const base = "https://kea-alt-del.dk/t5/site/imgs/";
+    const smallImg = base + "small/" + imageName + "-sm.jpg";
+    const mediumImg = base + "medium/" + imageName + "-md.jpg";
+    const largeImg = base + "large/" + imageName + ".jpg";
+
+    copy.querySelector("img").src = mediumImg;
 
 
   if (dish.discount) {
@@ -61,10 +70,6 @@ function showSingleDish(dish) {
     copy.querySelector(".price-discount").remove()
     copy.querySelector(".price-full span").textContent = dish.price
   }
-
-// const imageName = "cola"; // this would be dynamic
-//    const base = "https://kea-alt-del.dk/t5/site/imgs/";
-//    const mediumImg = base + "medium/" + imageName + "-md.jpg";
 
 
 
