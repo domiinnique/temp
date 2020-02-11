@@ -16,6 +16,10 @@ img {
   height: auto;
 }
 
+#veg
+{
+    width: 30%;
+}
 
 #wrapper {
   display: grid;
@@ -46,13 +50,9 @@ nav a {
 }
 nav a:hover {
   background: floralwhite;
-  color: var(--color-blue-base);
-  border-bottom: 1px solid var(--color-blue-dark);
 }
 
 main section h2 {
-  border-bottom: 1px solid var(--color-grey-base);
-  color: var(--color-grey-darkest);
   width: 100%;
   text-align: center;
   padding-bottom: 0.5rem;
@@ -70,7 +70,7 @@ main section h2 {
   padding: 2rem;
 }
 .course img {
-  box-shadow: 1px 1px 1px 1px var(--color-grey-dark);
+  box-shadow: 1px 1px 1px 1px;
 }
 .course .soldout {
   display: none;
@@ -80,14 +80,10 @@ main section h2 {
   top: 50%;
   width: 100%;
   text-align: center;
-  color: var(--color-grey-lightest);
   display: block;
-  background-color: var(--color-pink-light);
   transform: rotate(-45deg);
 }
-.course h3 {
-  font-family: var(--font-family-serif);
-}
+
 .course header {
   position: relative;
   display: flex;
@@ -99,10 +95,8 @@ main section h2 {
   position: absolute;
   right: -4px;
   bottom: -4px;
-  background: var(--color-white);
   margin: 0;
   padding: 0.5rem 1rem;
-  box-shadow: 1px 1px 1px 1px var(--color-grey-dark);
 }
 .course .price-discount {
   right: initial;
@@ -123,9 +117,6 @@ main section h2 {
   border: none;
   width: 100%;
   padding: 1rem;
-  color: var(--color-grey-lightest);
-  font-size: var(--font-size-base);
-  background: var(--color-blue-base);
   transition: all 0.4s;
   box-shadow: 2px 2px 0px 0px transparent;
   position: relative;
@@ -180,7 +171,6 @@ main section h2 {
 @media screen and (min-width: 800px) {
   nav {
     display: flex;
-    background: var(--color-blue-light);
   }
   nav a {
     border-bottom-color: transparent;
@@ -249,7 +239,8 @@ h5
 
 p
 {
-    font-family: 'Nanum Myeongjo', serif;
-    color: lightslategrey;
-   font-size: 10px;
+    font-family: monospace;
+    color: black;
+   font-size: 30px;
+
 }
