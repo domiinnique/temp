@@ -8,20 +8,23 @@
   <title>MENU</title>
 
   <link rel="stylesheet" href="temp.css"/>
-     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Slabo+27px&display=swap" rel="stylesheet">
+      <header>
+      <nav>
+   <li><a href="#starter">STARTERS</a></li>
+  <li><a href="#main">MAINS</a></li>
+<li><a href="#dessert">DESSERTS</a></li>
+ <li><a href="#drinks">DRINKS</a></li>
+ <li><a href="#sideorders">SIDEORDERS</a></li>
+      </nav>
+    </header>
 </head>
 
 <body>
+
+
   <div id="wrapper">
-    <header>
-      <nav>
-    <a href="#starter"><p>STARTERS</p></a>
-  <a href="#main"><p>MAINS</p></a>
-<a href="#dessert"><p>DESSERTS</p></a>
- <a href="#drinks"><p>DRINKS</p></a>
- <a href="#sideorders"><p>SIDEORDERS</p></a>
-      </nav>
-    </header>
+
 
     <main>
       <h1>MENU</h1>
@@ -30,15 +33,19 @@
               <article class="course soldout sale">
             <header>
               <h3>NAME</h3>
-              <p class="soldout">SOLD OUT!</p>
+
+              <div class="soldout"><h6>SOLD OUT</h6></div>
 
               <img class="imageName" src="images/medium/ringbroed-druer-md.jpg"/>
-              <p class="price price-discount"><span>69</span>,-</p>
-              <p class="price price-full"><span>69</span>,-</p>
+              <p class="price price-discount"><span>69</span></p>
+              <p class="price price-full"><span>69</span></p>
             </header>
             <section class="info">
              <h4>SHORT</h4>
-                <img src="veg.png" id="veg"/>
+
+                <img class="veg" src="veg.png"/>
+
+                <button><p>READ MORE</p></button>
             </section>
           </article>
         </template>

@@ -16,9 +16,9 @@ img {
   height: auto;
 }
 
-#veg
+.veg
 {
-    width: 30%;
+    width:  30%;
 }
 
 #wrapper {
@@ -39,17 +39,29 @@ img {
   margin: 0;
 }
 
-
-nav a {
-  display: block;
-  padding: 10px;
-    float: left;
-  text-align: center;
-  padding: 15px;
-  font-size: 18px;
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: wheat;
 }
-nav a:hover {
-  background: floralwhite;
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+li a:hover {
+  background-color: whitesmoke;
 }
 
 main section h2 {
@@ -81,7 +93,9 @@ main section h2 {
   width: 100%;
   text-align: center;
   display: block;
-  transform: rotate(-45deg);
+    background: red;
+    opacity: 0.5;
+
 }
 
 .course header {
@@ -122,7 +136,6 @@ main section h2 {
   position: relative;
 }
 .course button:before {
-  content: "";
   position: absolute;
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
@@ -134,20 +147,7 @@ main section h2 {
   transition: all 0.5s;
   transform-origin: top left;
 }
-.course button:hover {
-  cursor: pointer;
-  color: var(--color-white);
-  background: var(--color-blue-light);
-  box-shadow: 2px 2px 0px 0px var(--color-blue-base);
-}
-.course button:hover:before {
-  transform: scaleX(1);
-}
-.course button:active {
-  background: var(--color-pink-light);
-  box-shadow: 2px 2px 0px 0px var(--color-pink-dark);
-  transition: all 0.1s;
-}
+
 
 @media all and (min-width: 600px) {
   main > section > h2 {
@@ -183,9 +183,9 @@ main section h2 {
 h1
 {
     color:#521f00;
-    font-size: 20px;
+    font-size: 50px;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 20px;
  font-family: 'Nanum Myeongjo', serif;
 
 }
@@ -196,15 +196,13 @@ h2
     color:#521f00;
     font-size: 30px;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 30px;
+    margin:  bottom: 0px;
     font-family: 'Nanum Myeongjo', serif;
     letter-spacing: 2px;
 
 }
 
-h2:hover {
-  color: bisque;
-}
 
 h3
 {
@@ -219,10 +217,9 @@ h3
 h4
 {
     color:#521f00;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
-    margin-top: 0px;
- font-family: 'Nanum Myeongjo', serif;
+ font-family: 'Slabo 27px', serif;
 
 }
 
@@ -236,10 +233,18 @@ h5
 
 }
 
+h6
+{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+ font-family: 'Nanum Myeongjo', serif;
+
+}
 
 p
 {
-    font-family: monospace;
+    font-family: 'Slabo 27px', serif;
     color: black;
-   font-size: 30px;
+   font-size: 20px;
 }

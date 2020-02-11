@@ -54,9 +54,7 @@ function showSingleDish(dish) {
 
    const imageName = dish.image; // this would be dynamic
    const base = "https://kea-alt-del.dk/t5/site/imgs/";
-    const smallImg = base + "small/" + imageName + "-sm.jpg";
     const mediumImg = base + "medium/" + imageName + "-md.jpg";
-    const largeImg = base + "large/" + imageName + ".jpg";
 
     copy.querySelector("img").src = mediumImg;
 
