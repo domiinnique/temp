@@ -1,12 +1,44 @@
-fetch("https://kea-alt-del.dk/t5/api/productlist")
-  .then(function (response) {
-    return response.json()
-  })
-  .then(function (data) {
+
+
+
+
+
+
+
+
+fetch("https://kea-alt-del.dk/t5/api/categories")
+  .then(res => res.json())
+  .then(createCategories)
+
+function createCategories(data) {
+  console.log(data)
+  data.forEach(function (oneCat) {
+
+    const section = document.createElement("section");
+    section.id = oneCat;
+    const h2 = document.createElement("h2");
+    h2.textContent = oneCat;
+    section.appendChild(h2);
+
+    document.querySelector("main").appendChild(section);
+ })
+ getProducts();
+}
+
+
+
+function getProducts() {
+    fetch("https://kea-alt-del.dk/t5/api/productlist")
+     .then(function (response) {
+      return response.json()
+    })
+    .then(function (data) {
     showData(data)
-  })
+    })
+}
 
 function showData(jsonData) {
+  console.log(jsonData)
   jsonData.forEach(showSingleDish)
 }
 
@@ -30,14 +62,16 @@ function showSingleDish(dish) {
     copy.querySelector(".price-full span").textContent = dish.price
   }
 
- const imageName = "cola"; // this would be dynamic
-    const base = "https://kea-alt-del.dk/t5/site/imgs/";
-    const mediumImg = base + "medium/" + imageName + "-md.jpg";
+// const imageName = "cola"; // this would be dynamic
+//    const base = "https://kea-alt-del.dk/t5/site/imgs/";
+//    const mediumImg = base + "medium/" + imageName + "-md.jpg";
 
 
 
+    console.log(`#${dish.category}`)
+    document.querySelector(`#${dish.category}`).appendChild(copy);
+//    const whoIsYourDaddy = document.querySelector("#starters")
+//    whoIsYourDaddy.appendChild(copy)
 
-    const whoIsYourDaddy = document.querySelector("#starters")
-    whoIsYourDaddy.appendChild(copy)
 }
 
