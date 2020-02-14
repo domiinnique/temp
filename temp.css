@@ -82,7 +82,7 @@ main section h2 {
   padding: 2rem;
 }
 .course img {
-  box-shadow: 1px 1px 1px 1px;
+  border-radius: 50%;
 }
 .course .soldout {
   display: none;
@@ -242,12 +242,35 @@ h6
 
 }
 
+
 p
 {
     font-family: 'Slabo 27px', serif;
     color: black;
    font-size: 20px;
 }
+
+p2
+{
+    color: #bf5e5e;
+    font-size: 20px;
+    text-align: center;
+ font-family: 'Nanum Myeongjo', serif;
+
+}
+
+span
+{
+    color: #bf5e5e;
+    font-size: 20px;
+    text-align: center;
+ font-family: 'Nanum Myeongjo', serif;
+
+    }
+
+button
+{
+background-color: beige;}
 
 
 .hide {
